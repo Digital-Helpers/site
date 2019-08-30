@@ -1,0 +1,36 @@
+@import "reset.less";
+
+html {
+  h2 {
+    font-size: 36px;
+    font-family: "Anton", sans-serif;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+
+    .header-img-container {
+      width: 100%;
+      margin-left: 10px;
+      position: relative;
+      div img {
+        max-width: 100%;
+        max-height: 100vh;
+        position: absolute;
+      }
+      .overlay {
+        top: 0px;
+      }
+    }
+    .header-title-container {
+      width: 30%;
+      position: absolute;
+      z-index: 4;
+      left: 75%;
+      top: 3%;
+      background: lightblue;
+      border-radius: 50%;
+      padding: 5px;
+    }
+  }
+}
