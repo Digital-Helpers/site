@@ -546,6 +546,7 @@ header .subtitle {
   }
   .mid .mid-image-container {
     width: 100%;
+    height: auto;
   }
   .mid .mid-image-container div {
     display: flex;
