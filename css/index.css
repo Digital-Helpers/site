@@ -551,6 +551,7 @@ header .subtitle {
   .mid .mid-image-container div {
     display: flex;
     justify-content: center;
+    height: auto;
   }
   .mid .mid-image-container div img {
     height: auto;
