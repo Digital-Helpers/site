@@ -190,8 +190,6 @@ nav p {
 nav ul {
   margin: 10px;
   height: 40px;
-  display: flex;
-  align-items: center;
 }
 nav a {
   font-family: "Roboto", sans-serif;
@@ -203,7 +201,7 @@ nav a {
 .mobile-nav {
   display: none;
 }
-@media (max-width: 550px) {
+@media (max-width: 1000px) {
   nav {
     background: white;
   }
@@ -214,6 +212,7 @@ nav a {
     display: flex;
     justify-content: space-between;
     height: 10vh;
+    align-items: center;
   }
   .logo-mobile {
     padding-right: 5%;
@@ -228,7 +227,7 @@ nav a {
   #menuToggle {
     display: block;
     position: relative;
-    top: 20px;
+    top: 3px;
     left: 20px;
     z-index: 1;
     -webkit-user-select: none;
@@ -264,42 +263,29 @@ nav a {
   #menuToggle span:nth-last-child(2) {
     transform-origin: 0% 100%;
   }
-  /* 
-    * Transform all the slices of hamburger
-    * into a crossmark.
-    */
   #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #232323;
   }
-  /*
-    * But let's hide the middle one.
-    */
   #menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
-  /*
-    * Ohyeah and the last one should go the other direction
-    */
   #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
-  /*
-    * Make this absolute positioned
-    * at the top left of the screen
-    */
   #menu {
     position: absolute;
     width: 300px;
+    height: 100vh;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-    background: #ededed;
+    background: #edeeee;
+    background: linear-gradient(180deg, #edeeee 0%, rgba(231, 234, 236, 0.01) 50%, #f2f5f6 100%);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -308,9 +294,6 @@ nav a {
     padding: 10px 0;
     font-size: 22px;
   }
-  /*
-    * And let's slide it in from the left
-    */
   #menuToggle input:checked ~ ul {
     transform: none;
   }
@@ -348,7 +331,7 @@ footer a {
   margin: 15px;
   color: white;
 }
-@media (max-width: 550px) {
+@media (max-width: 1000px) {
   footer {
     height: 300px;
   }
@@ -362,7 +345,7 @@ footer a {
 header {
   display: flex;
   justify-content: space-between;
-  height: 600px;
+  min-height: 600px;
   align-items: center;
   background: #edeeee;
   background: linear-gradient(180deg, #edeeee 0%, rgba(231, 234, 236, 0.01) 50%, #f2f5f6 100%);
@@ -394,7 +377,7 @@ header .header-title-container .cta {
 header .subtitle {
   margin: 50px 0px;
 }
-@media (max-width: 550px) {
+@media (max-width: 1000px) {
   header {
     flex-direction: column;
     padding: 20px 0px;
@@ -484,7 +467,7 @@ header .subtitle {
   background: white;
   padding: 100px 0px;
 }
-@media (max-width: 550px) {
+@media (max-width: 1000px) {
   .top {
     width: 90%;
   }
@@ -514,17 +497,17 @@ header .subtitle {
   padding: 0px;
   margin: 50px 0px;
 }
+.mid .mid-checklist {
+  width: 50%;
+}
 .mid .mid-image-container {
-  width: 40%;
+  width: 100%;
 }
 .mid .mid-image-container div {
   width: 100%;
 }
 .mid .mid-image-container div img {
-  width: 100%;
-}
-.mid .mid-checklist {
-  width: 50%;
+  width: 33.3%;
 }
 .mid-2-main-container {
   padding: 100px 0px;
@@ -537,27 +520,6 @@ header .subtitle {
   padding: 100px 0px;
   justify-content: space-evenly;
   align-items: center;
-}
-@media (max-width: 550px) {
-  .mid {
-    width: 100%;
-    flex-direction: column;
-  }
-  .mid .mid-image-container {
-    width: 60%;
-  }
-  .mid .mid-checklist {
-    width: 90%;
-  }
-  .mid h3 {
-    text-align: center;
-  }
-  .mid-2-main-container {
-    padding: 50px 0px;
-  }
-  .mid-2 {
-    padding: 50px 0px;
-  }
 }
 #contact {
   display: flex;
@@ -577,7 +539,32 @@ header .subtitle {
 .bottom-content-container {
   width: 40%;
 }
-@media (max-width: 550px) {
+@media (max-width: 1000px) {
+  .mid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .mid .mid-image-container {
+    width: 100%;
+  }
+  .mid .mid-image-container div {
+    display: flex;
+    justify-content: center;
+  }
+  .mid .mid-checklist {
+    width: 90%;
+  }
+  .mid h3 {
+    text-align: center;
+  }
+  .mid-2-main-container {
+    padding: 50px 0px;
+  }
+  .mid-2 {
+    padding: 50px 0px;
+  }
+}
+@media (max-width: 1000px) {
   #contact {
     padding: 50px 0px;
   }
@@ -587,4 +574,29 @@ header .subtitle {
   .bottom-content-container {
     width: 90%;
   }
+}
+.terms {
+  background: #edeeee;
+  background: linear-gradient(180deg, #edeeee 0%, #e7eaec 50%, #f2f5f6 100%);
+}
+.terms {
+  padding: 100px 50px;
+}
+.terms h2,
+.terms h1,
+.terms h4 {
+  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  text-align: left;
+  font-weight: bold;
+  margin: 30px 0px;
+}
+.terms p,
+.terms li {
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.75;
+  font-family: "Roboto", sans-serif;
+  margin: 10px;
 }

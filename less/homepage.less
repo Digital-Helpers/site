@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  height: 600px;
+  min-height: 600px;
   align-items: center;
   background: rgb(237, 238, 238);
   background: linear-gradient(
@@ -147,6 +147,7 @@ header {
     padding: 20px 0px;
   }
 }
+
 .main-mid-container {
   background: rgb(237, 238, 238);
   background: linear-gradient(
@@ -174,17 +175,19 @@ header {
     padding: 0px;
     margin: 50px 0px;
   }
+
+  .mid-checklist {
+    width: 50%;
+  }
   .mid-image-container {
-    width: 40%;
+    width: 100%;
+
     div {
       width: 100%;
       img {
-        width: 100%;
+        width: 33.3%;
       }
     }
-  }
-  .mid-checklist {
-    width: 50%;
   }
 }
 
@@ -200,30 +203,7 @@ header {
   justify-content: space-evenly;
   align-items: center;
 }
-@media @phone {
-  .mid {
-    width: 100%;
-    flex-direction: column;
 
-    .mid-image-container {
-      width: 60%;
-    }
-
-    .mid-checklist {
-      width: 90%;
-    }
-
-    h3 {
-      text-align: center;
-    }
-  }
-  .mid-2-main-container {
-    padding: 50px 0px;
-  }
-  .mid-2 {
-    padding: 50px 0px;
-  }
-}
 #contact {
   display: flex;
   justify-content: space-evenly;
@@ -250,6 +230,35 @@ header {
 .bottom-content-container {
   width: 40%;
 }
+@media @phone {
+  .mid {
+    width: 100%;
+    flex-direction: column;
+
+    .mid-image-container {
+      width: 100%;
+      div {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .mid-checklist {
+      width: 90%;
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+  .mid-2-main-container {
+    padding: 50px 0px;
+  }
+  .mid-2 {
+    padding: 50px 0px;
+  }
+}
+
 @media @phone {
   #contact {
     padding: 50px 0px;
