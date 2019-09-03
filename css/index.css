@@ -545,7 +545,7 @@ header .subtitle {
     flex-direction: column;
   }
   .mid .mid-image-container {
-    width: 90%;
+    width: 100%;
   }
   .mid .mid-image-container div {
     display: flex;
@@ -553,8 +553,8 @@ header .subtitle {
     width: 100%;
   }
   .mid .mid-image-container div img {
-    width: 100%;
-    height: auto;
+    max-width: 298px;
+    max-height: 314px;
   }
   .mid .mid-checklist {
     width: 90%;
