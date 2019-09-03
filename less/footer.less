@@ -1,6 +1,6 @@
 footer {
   background: black;
-  height: 20vh;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,5 +16,14 @@ footer {
     text-decoration: none;
     margin: 15px;
     color: white;
+  }
+  @media @phone {
+    height: 300px;
+    ul {
+      flex-direction: column;
+      li {
+        margin: 10px 0px;
+      }
+    }
   }
 }
