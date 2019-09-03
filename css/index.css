@@ -545,15 +545,16 @@ header .subtitle {
     flex-direction: column;
   }
   .mid .mid-image-container {
-    max-height: 300px;
+    width: 100%;
   }
   .mid .mid-image-container div {
     display: flex;
     justify-content: center;
-    height: auto;
+    width: 100%;
   }
   .mid .mid-image-container div img {
-    height: auto;
+    width: 298px;
+    height: 314px;
   }
   .mid .mid-checklist {
     width: 90%;
