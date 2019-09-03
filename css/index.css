@@ -552,6 +552,9 @@ header .subtitle {
     display: flex;
     justify-content: center;
   }
+  .mid .mid-image-container div img {
+    height: auto;
+  }
   .mid .mid-checklist {
     width: 90%;
   }
