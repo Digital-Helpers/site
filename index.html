@@ -5,9 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="/css/index.css" />
   <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat|Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/index.css" />
   <script src="https://kit.fontawesome.com/38a173daba.js"></script>
   <script src="/scripts/scripts.js"></script>
   <title>Digital Helpers</title>
@@ -24,20 +25,23 @@
       <ul>
         <li> <a href="#">Home</a></li>
         <li> <a href="#about">About</a></li>
-        <li> <a href="#">Contact</a></li>
+        <li> <a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="phone-number"><i class="fas fa-phone"></i>
       <p>800-555-1234</p>
     </div>
-
   </nav>
+
   <header>
     <div class="header-title-container">
       <h2 class="tagline">Revolutionize How You Tech </h2>
       <p class="subtitle">we provide customized technical solutions </br> for consumers and businesses alike.</p>
-      <div class="cta-button">
-        <p>START FREE SCAN</p>
+      <div class="cta-button" data-toggle="modal" data-target="#exampleModal"on-click="modal">
+        <!-- <p>START FREE SCAN</p> -->
+        <div class="phone-number"><i class="fas fa-phone"></i>
+          <p>CALL US 800-555-1234</p>
+        </div>
       </div>
       <p class="cta">get started now with a free system check</p>
     </div>
@@ -45,23 +49,40 @@
       <div>
           <img class="overlay" src="/assets/computerhelp.png" alt="computer helpers" />
       </div>
-      
     </div>
   </header>
 
+  
+  <!-- MODAL CONTENT -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- MAIN CONTENT SECTION -->
 
 
   <section class="main">
     <div class="top">
-        <h3>We’ve got all your tech needs covered</h3>
-        <div class="box"><p>From PCs, Macs, Smartphones, home networks, digital assistants, and more, Support.com provides
+        <h3>Having technical difficulties? We've got you covered</h3>
+        <div class="box"><p>From PCs, Macs, Smartphones, home networks, digital assistants, and more, The Digital Helpers provides
           unbiased, expert advice and support. Start checking things off your tech to-do list and start getting the most out
           of your technology.</p></div>
-          <div class="cta-button">
-              <p>CALL NOW 800-555-1234</p>
-            </div>
     </div>
   </section>
   <section class="main-mid-container">
@@ -79,7 +100,7 @@
               Get a Cleaner Computer in Minutes
             </h3>
             <p>
-                MyCleanPC deletes files that can slow down your computer and internet browsers.
+                We delete files that can slow down your computer and web browsers.
             </p>
           </li>
           <li>
@@ -88,7 +109,7 @@
                 Stop Pop-Ups & Improve Security
               </h3>
               <p>
-                  MyCleanPC removes software and files that may cause annoying pop-ups, irrelevant warnings and computer crashes.
+                  We remove software and files that may cause annoying pop-ups, irrelevant warnings and computer crashes.
               </p>
             </li>
             <li>
@@ -97,7 +118,7 @@
                   Cleaner Means Faster
                 </h3>
                 <p>
-                    Our all-new MyCleanPC software features a more powerful scanning engine that finds & repairs files that may slow down your computer.
+                    Our Digital Helpers Toolkit contains powerful scanning engines that finds & repairs files that may slow down your computer.
                 </p>
               </li>
         </ul>
@@ -105,31 +126,55 @@
     </div>
 
   </section>  
+
+  <!-- ABOUT SECTION -->
+
   <section id="about" class="mid-2-main-container">
-
-      <div class="mid-2">
-          <div class="mid-2-image-container">
-              <div>
-                  <img src="/assets/customerservice.png" alt="">
-              </div> 
-            </div>
-            
-            <div class="mid-2-content-container">
-                  <div class="box">
-                    <p>
-                      Friendly Expert Tech Pros
-                        Our Tech Pros are on your side. With over 20 years of experience, our experts have the know-how to get your tech back up and running in no time.
-                        Experience working across all brands, devices, and issues
-                        Specialize in solving complex issues where devices are not working well together
-                        Speak in everyday language and use the best tools to solve your issue quickly
-                        Embody the 4Ps — patient, pleasant, productive, professional
-                        </p>
-                      <p>Connect with a Tech Pro — just call: 1-833-202-2695</p>
-                  </div>
-            </div>
+      <h3>Who Are The Digital Helpers?</h3>
+      <div class="mid-2">          
+        <div class="mid-2-content-container">          
+          <div class="box">
+            <p>
+              We are tech support! Our expert team of certified technicians are here for you.
+              Our experts have the know-how to nip any technical difficulties in the bud. We
+                have experience working with multiple brands and devices, no issues are too big or too small.
+                Don't worry, we speak your language. Our techs will breakdown any issue in a way that you
+                can understand so that we can work together towards a solution. 
+                </p>
+          </div>
+        </div>
       </div>
-  
+  </section>
 
+<!-- CONTACT SECTION -->
+
+  <section id="contact">
+    <h2>Go with the winning team!</h2>
+    <div class="bottom-image-container">
+      <div>
+        <img src="/assets/customerservice.png" alt="">
+      </div> 
+    </div>
+    <div class="bottom-content-container">
+
+<!-- FORM -->
+
+<form>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email Address</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Message</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+  </form>
+    <div class="button-container">
+        <button class="cta-2-button">
+            <p>SEND US A MESSAGE</p>
+        </button>
+    </div>
+  </div>
   </section>
 
 <!-- FOOTER -->
@@ -145,6 +190,9 @@
           </ul>
         </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
