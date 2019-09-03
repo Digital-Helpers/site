@@ -494,7 +494,7 @@ header .subtitle {
   align-items: center;
 }
 .mid p {
-  text-align: center;
+  text-align: left;
   line-height: 1.75;
 }
 .mid h3 {
@@ -506,14 +506,11 @@ header .subtitle {
 .mid .mid-checklist {
   width: 50%;
 }
-.mid .mid-image-container {
-  width: 100%;
-}
 .mid .mid-image-container div {
   width: 100%;
 }
 .mid .mid-image-container div img {
-  width: 33.3%;
+  max-width: 400px;
 }
 .mid-2-main-container {
   padding: 100px 0px;
@@ -549,6 +546,9 @@ header .subtitle {
   .mid {
     width: 100%;
     flex-direction: column;
+  }
+  .mid p {
+    text-align: center;
   }
   .mid .mid-image-container {
     width: 100%;
