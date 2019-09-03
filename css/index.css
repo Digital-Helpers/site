@@ -190,6 +190,8 @@ nav p {
 nav ul {
   margin: 10px;
   height: 40px;
+  display: flex;
+  align-items: center;
 }
 nav a {
   font-family: "Roboto", sans-serif;
@@ -283,7 +285,7 @@ nav a {
     padding: 50px;
     padding-top: 125px;
     background: #edeeee;
-    background: linear-gradient(180deg, #edeeee 0%, rgba(231, 234, 236, 0.01) 50%, #f2f5f6 100%);
+    background: linear-gradient(180deg, #edeeee 0%, rgba(231, 234, 236, 0.8) 50%, #f2f5f6 100%);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
@@ -309,6 +311,10 @@ nav a {
     text-decoration: none;
     margin: 15px;
     color: black;
+  }
+  ul {
+    flex-direction: column;
+    font-weight: bold;
   }
 }
 footer {
