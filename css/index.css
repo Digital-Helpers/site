@@ -156,7 +156,7 @@ html p {
 nav {
   display: flex;
   justify-content: space-between;
-  height: 10vh;
+  height: 60px;
 }
 nav .logo {
   width: 33.3%;
@@ -203,7 +203,7 @@ nav a {
 .mobile-nav {
   display: none;
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   nav {
     background: white;
   }
@@ -214,6 +214,9 @@ nav a {
     display: flex;
     justify-content: space-between;
     height: 10vh;
+  }
+  .logo-mobile {
+    padding-right: 5%;
   }
   a {
     text-decoration: none;
@@ -311,27 +314,6 @@ nav a {
   #menuToggle input:checked ~ ul {
     transform: none;
   }
-  .nav-bar {
-    display: none;
-    width: 33.3%;
-  }
-  .phone-number {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .phone-number p {
-    color: white;
-    font-weight: bold;
-    padding-right: 20px;
-  }
-  .phone-number .fa-phone {
-    color: white;
-    font-weight: bold;
-    padding-right: 10px;
-    font-size: 20px;
-  }
   p {
     display: flex;
     font-size: 24px;
@@ -348,7 +330,7 @@ nav a {
 }
 footer {
   background: black;
-  height: 20vh;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -366,10 +348,21 @@ footer a {
   margin: 15px;
   color: white;
 }
+@media (max-width: 550px) {
+  footer {
+    height: 300px;
+  }
+  footer ul {
+    flex-direction: column;
+  }
+  footer ul li {
+    margin: 10px 0px;
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
-  height: 90vh;
+  height: 600px;
   align-items: center;
   background: #edeeee;
   background: linear-gradient(180deg, #edeeee 0%, rgba(231, 234, 236, 0.01) 50%, #f2f5f6 100%);
@@ -401,7 +394,7 @@ header .header-title-container .cta {
 header .subtitle {
   margin: 50px 0px;
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   header {
     flex-direction: column;
     padding: 20px 0px;
@@ -491,7 +484,7 @@ header .subtitle {
   background: white;
   padding: 100px 0px;
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .top {
     width: 90%;
   }
@@ -507,17 +500,19 @@ header .subtitle {
   width: 85%;
   display: flex;
   margin: 0 auto;
-  padding: 100px 0px;
+  padding: 50px 0px;
   justify-content: space-between;
   align-items: center;
 }
 .mid p {
-  text-align: left;
+  text-align: center;
+  line-height: 1.75;
 }
 .mid h3 {
+  font-size: 24px;
   text-align: left;
   padding: 0px;
-  margin: 30px 0px;
+  margin: 50px 0px;
 }
 .mid .mid-image-container {
   width: 40%;
@@ -531,7 +526,19 @@ header .subtitle {
 .mid .mid-checklist {
   width: 50%;
 }
-@media (max-width: 500px) {
+.mid-2-main-container {
+  padding: 100px 0px;
+  background: white;
+}
+.mid-2 {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  padding: 100px 0px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 550px) {
   .mid {
     width: 100%;
     flex-direction: column;
@@ -545,18 +552,12 @@ header .subtitle {
   .mid h3 {
     text-align: center;
   }
-}
-.mid-2-main-container {
-  padding: 100px 0px;
-  background: white;
-}
-.mid-2 {
-  width: 80%;
-  display: flex;
-  margin: 0 auto;
-  padding: 100px 0px;
-  justify-content: space-evenly;
-  align-items: center;
+  .mid-2-main-container {
+    padding: 50px 0px;
+  }
+  .mid-2 {
+    padding: 50px 0px;
+  }
 }
 #contact {
   display: flex;
@@ -575,4 +576,15 @@ header .subtitle {
 }
 .bottom-content-container {
   width: 40%;
+}
+@media (max-width: 550px) {
+  #contact {
+    padding: 50px 0px;
+  }
+  .bottom-image-container {
+    margin: 30px 0px;
+  }
+  .bottom-content-container {
+    width: 90%;
+  }
 }
