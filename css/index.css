@@ -553,7 +553,6 @@ header .subtitle {
     width: 100%;
   }
   .mid .mid-image-container div img {
-    max-width: 298px;
     max-height: 314px;
   }
   .mid .mid-checklist {
