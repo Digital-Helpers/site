@@ -10,14 +10,14 @@ header {
     rgba(231, 234, 236, 0.01) 50%,
     rgba(242, 245, 246, 1) 100%
   );
-
+  .mobile-only {
+    display: none;
+  }
   .header-img-container {
     width: 50%;
   }
 
   div {
-    // display: flex;
-    // justify-content: flex-end;
     width: 80%;
     margin: 0 auto;
 
@@ -39,12 +39,95 @@ header {
   .subtitle {
     margin: 50px 0px;
   }
+  @media @phone {
+    flex-direction: column;
+    padding: 20px 0px;
+
+    .mobile-only {
+      display: block;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    br {
+      display: none;
+    }
+
+    .header-img-container {
+      display: none;
+    }
+
+    .header-title-container {
+      width: 90%;
+
+      p {
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.25;
+        display: block;
+      }
+
+      .subtitle {
+        margin: 0px 0px;
+      }
+      .cta {
+        font-size: 14px;
+      }
+    }
+    .cta-button {
+      border: solid 2px black;
+    }
+    .phone-number {
+      p {
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .fa-phone {
+        font-size: 16px;
+      }
+    }
+  }
+}
+.phone-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-weight: bold;
+    color: black;
+  }
+  .fa-phone {
+    font-weight: bold;
+    padding-right: 10px;
+    font-size: 20px;
+    color: black;
+  }
 }
 .cta-button {
-  margin: 30px 50px 10px 50px;
+  margin: 30px auto 10px auto;
   padding: 10px;
   border: solid 2px lightblue;
   border-radius: 30px;
+  max-width: 425px;
+  cursor: pointer;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+.cta-2-button {
+  margin: 30px auto 10px auto;
+  padding: 10px;
+  border: solid 2px lightblue;
+  border-radius: 30px;
+  max-width: 250px;
+  background: none;
+  p {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+  }
 }
 .top {
   width: 70%;
@@ -54,6 +137,15 @@ header {
 .main {
   background: white;
   padding: 100px 0px;
+}
+
+@media @phone {
+  .top {
+    width: 90%;
+  }
+  .main {
+    padding: 20px 0px;
+  }
 }
 .main-mid-container {
   background: rgb(237, 238, 238);
@@ -93,7 +185,27 @@ header {
     width: 50%;
   }
 }
+
+@media @phone {
+  .mid {
+    width: 100%;
+    flex-direction: column;
+
+    .mid-image-container {
+      width: 60%;
+    }
+
+    .mid-checklist {
+      width: 90%;
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+}
 .mid-2-main-container {
+  padding: 100px 0px;
   background: white;
 }
 .mid-2 {
@@ -101,17 +213,32 @@ header {
   display: flex;
   margin: 0 auto;
   padding: 100px 0px;
-  justify-content: space-between;
-  .mid-2-image-container {
-    width: 60%;
-    div {
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
+  justify-content: space-evenly;
+  align-items: center;
+}
+#contact {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(237, 238, 238);
+  background: linear-gradient(
+    180deg,
+    rgba(237, 238, 238, 1) 0%,
+    rgba(231, 234, 236, 0.01) 50%,
+    rgba(242, 245, 246, 1) 100%
+  );
+  padding: 100px 0px;
+
+  h2 {
+    margin: 0px 0px 20px 0px;
   }
-  .mid-2-content-container {
-    width: 40%;
+}
+.bottom-image-container {
+  img {
+    max-height: 200px;
   }
+}
+.bottom-content-container {
+  width: 40%;
 }
