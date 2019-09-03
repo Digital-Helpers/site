@@ -545,8 +545,7 @@ header .subtitle {
     flex-direction: column;
   }
   .mid .mid-image-container {
-    width: 100%;
-    height: auto;
+    max-height: 300px;
   }
   .mid .mid-image-container div {
     display: flex;
