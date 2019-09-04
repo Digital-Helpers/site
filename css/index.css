@@ -348,6 +348,11 @@ footer a {
     margin: 10px 0px;
   }
 }
+.copyright {
+  font-size: 14px;
+  margin: 30px 0px;
+  color: gray;
+}
 header {
   display: flex;
   justify-content: space-between;
